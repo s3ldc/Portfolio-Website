@@ -1,0 +1,132 @@
+.experience {
+    text-align: center;
+}
+
+.experience__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+}
+
+.experience__description {
+    max-width: 60ch;
+    margin: 1rem auto;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+}
+
+/* Container behaves similarly to .work__container */
+.experience__container {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+}
+
+/* Experience Card */
+.experience__item {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.experience__item:hover {
+    transform: translateY(-8px);
+    border-color: var(--clr-indigo);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.25);
+}
+
+
+.experience__role {
+    font-size: var(--size-lg);
+    color: var(--clr-light);
+    margin-bottom: 0.5rem;
+}
+
+.experience__company {
+    font-size: var(--size-sm);
+    color: var(--clr-indigo);
+    margin-bottom: 1rem;
+}
+
+.experience__details {
+    list-style: none;
+    padding: 0;
+}
+
+.experience__details li {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------------------
+    RESPONSIVE BEHAVIOR
+--------------------------------- */
+
+/* XS */
+@media (min-width: 475px) {
+    .experience__title {
+        font-size: var(--size-3xl);
+    }
+
+    .experience__description {
+        font-size: var(--size-base);
+    }
+}
+
+/* SM */
+@media (min-width: 640px) {
+    .experience__container {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 4rem;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) {
+    .experience__role {
+        font-size: var(--size-xl);
+    }
+}
+
+/* LG */
+@media (min-width: 1024px) {
+    .experience__title {
+        font-size: var(--size-4xl);
+    }
+
+    .experience__description {
+        font-size: var(--size-lg);
+    }
+
+    .experience__details li {
+        font-size: var(--size-base);
+    }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+    .experience__title {
+        font-size: var(--size-5xl);
+    }
+
+    .experience__details li {
+        font-size: var(--size-lg);
+    }
+
+    .experience__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* 2XL */
+@media (min-width: 1536px) {
+    .experience__container {
+        width: 70%;
+    }
+}
